@@ -55,5 +55,24 @@ GTKWave is a VCD waveform viewer based on the GTK library. This viewer supports 
 
 <p align='center'> <img src= 'https://user-images.githubusercontent.com/110731913/183261331-a86a9e7c-8e26-4cb0-a4c5-9b4475aeee70.png'></p>
 
+## Installing iverilog and GTKWave
+
+For Ubuntu
+Open your terminal and type the following to install iverilog and GTKWave
+
+$   sudo apt-get update
+$   sudo apt-get install iverilog gtkwave
+
+## Functional Simulation
+To clone the Repository and download the Netlist files for Simulation, enter the following commands in your terminal.
+
+$   sudo apt install -y git
+$   git clone https://github.com/sanampudig/iiitb_pwm_gen
+$   cd iiitb_pwm_gen
+$   iverilog iiitb_pwm_gen.v iiitb_pwm_gen_tb.v
+$   ./a.out
+$   gtkwave pwm.vcd
+
+
 
 
