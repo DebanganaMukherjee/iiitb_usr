@@ -73,6 +73,8 @@ $   iverilog iiitb_pwm_gen.v iiitb_pwm_gen_tb.v
 $   ./a.out
 $   gtkwave pwm.vcd
 
+## Simulation Results
+
 
 
 
