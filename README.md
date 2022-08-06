@@ -8,7 +8,7 @@ A 4-bit Universal Shift Register consists of 4 flip-flops and 4 4×1 multiplexer
 
 <p align='center'> <img src='https://user-images.githubusercontent.com/110731913/183254175-2079ef33-42f3-4757-b0c3-60ca920937fd.png'></p>
 
-## Circuit Connections
+## Circuit Design
 This  model has the following connections: 
 1) The first input is connected to the output pin of the corresponding flip-flop. 
 2) The second input is connected to the output of the very-previous flip flop which initiates the right shift.
@@ -26,5 +26,34 @@ According to the inputs to the select lines, the following modes can be implemen
 1) The input '00' to the select lines refers to "locked state" wherein the register contents remain unchanged.
 2) The input '01' refers to "right shift" meaning that the register contents will be shifted towards the right.
 3) The input '10' indicates "left shift" which shifts the contents of the register to the left.   
-4) The input '11' 
+4) The input '11' to the select line reflects parallel loading of data into the register.
+
+## Advantages of Universal Shift Register
+
+1) Has the ability to perform 3 operations: shift-left, shift-right, and parallel loading.
+2) Temporary storage of data within register.
+3) Capable of performing serial to serial, serial to parallel, parallel to serial and parallel to parallel operations.
+4) Acts as an interface between devices during data transfer.
+
+## Applications
+
+1) Used in micro-controllers for I/O expansion
+2) Used as a serial-to-serial, parallel-to-parallel, serial-to-parallel data converter respectively.
+3) Used in parallel and serial to serial data transfer.
+4) Used as a memory element in computers.
+5) Used in time delay and data manipulation applications.
+6) Used in frequency counters, binary counters and digital clocks.
+
+## About iverilog
+
+Icarus Verilog is an implementation for the IEEE-1364 Verilog hardware description language. It is a Verilog simulation and synthesis tool.
+
+## About GTKWave
+
+GTKWave is a VCD waveform viewer based on the GTK library. This viewer supports VCD and LXT formats for signal dumps. GTKWave reads Ver Structural Verilog Compiler generated AET files as well as standard Verilog VCD/EVCD files and allows their viewing. 
+
+
+<p align='center'> <img src= 'https://user-images.githubusercontent.com/110731913/183261331-a86a9e7c-8e26-4cb0-a4c5-9b4475aeee70.png'></p>
+
+
 
