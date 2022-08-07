@@ -76,7 +76,7 @@ $   gtkwave pwm.vcd
 ```
 ## Simulation Results
 
-The Simulation Results for input data = 1001 are as follows:
+The Simulation Results for input data = '1001' are as follows:
 <p align= 'center'><img src='https://user-images.githubusercontent.com/110731913/183284565-d6e7d469-b950-465e-8b01-5c9587cbd116.png'></p>
 
 The above simulation displays Parallel Loading, Right Shift, Left Shift and Locked State (No Change) operations respectively on input data '1001'.
