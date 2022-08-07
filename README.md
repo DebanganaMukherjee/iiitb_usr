@@ -82,6 +82,13 @@ The Simulation Results for input data = '1001' are as follows:
 The above simulation displays Parallel Loading, Right Shift, Left Shift and Locked State (No Change) operations respectively on input data '1001'.
 
 ## Synthesis of Verilog Code
+### About Yosys
+Yosys is a framework for Verilog RTL synthesis. It currently has extensive Verilog-2005 support and provides a basic set of synthesis algorithms for various application domains.
+- more at https://yosyshq.net/yosys/
+
+To install yosys follow the instructions given in the following github repository:
+- https://github.com/YosysHQ/yosys
+  - Note: Identify the .lib file path in cloned folder and change the path in highlighted text to identified path
 
 
 
