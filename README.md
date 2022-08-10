@@ -88,7 +88,23 @@ Yosys is a framework for Verilog RTL synthesis. It currently has extensive Veril
 
 To install yosys follow the instructions given in the following github repository:
 - https://github.com/YosysHQ/yosys
-  - Note: Identify the .lib file path in cloned folder and change the path in highlighted text to identified path
+
+## Contributors
+- Debangana Mukherjee
+- Kunal Ghosh
+
+## Acknowledgements
+- Kunal Ghosh, Director, VSD Corp. Pvt. Ltd.
+
+## Contact Information
+- Debangana Mukherjee, Research Scholar at International Institute of Information Technology, Bangalore (debangana.mukherjee@iiitb.ac.in)
+- Kunal Ghosh, Director, VSD Corp. Pvt. Ltd. (kunalghosh@gmail.com)
+
+## References
+- www.geeksforgeeks.org/universal-shift-register-in-digital-logic/
+- https://media.cheggcdn.com/media/d06/phpjKEYI9
+- For verilog code and testbench: https://youtu.be/kVMb3seJKhI
+
 
 
 
