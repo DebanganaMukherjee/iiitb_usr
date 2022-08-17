@@ -21,7 +21,7 @@ The working of the Universal Shift Register depends on the inputs given to the s
 According to the inputs to the select lines, the following modes can be implemented in a Universal Shift Register:
 
 
-<p align='center'> <img src= 'https://user-images.githubusercontent.com/110731913/183254625-3b5794f8-6e30-4a1c-b5c8-169991766499.png'></p>
+<p align='center'> <img src= 'https://2.bp.blogspot.com/-wgQJcEYelAY/WjJ7qCHH2xI/AAAAAAAAAF0/TBHSczins1k3nCFvvo8xaCgPAXw8AjCEACLcBGAs/s1600/324.PNG'></p>
 
 1) The input '00' to the select lines refers to "locked state" wherein the register contents remain unchanged.
 2) The input '01' refers to "right shift" meaning that the register contents will be shifted towards the right.
