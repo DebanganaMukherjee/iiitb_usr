@@ -66,16 +66,13 @@ $   sudo apt-get install iverilog gtkwave
 ```
 
 
-## Synthesis of Verilog Code 
+## Simulation and Synthesis 
 ### About Yosys
 Yosys is a framework for Verilog RTL synthesis. It currently has extensive Verilog-2005 support and provides a basic set of synthesis algorithms for various application domains.
 - more at https://yosyshq.net/yosys/
 
 To install yosys follow the instructions given in the following github repository:
 - https://github.com/YosysHQ/yosys/blob/master/README.md#installation
-
-
-## Simulation and Synthesis
 
 ### Functional Simulation
 To clone the Repository and download the Netlist files for Simulation, enter the following commands in your terminal:
@@ -96,8 +93,8 @@ Synthesis takes place in multiple steps:
 - Optimizing the mapped netlist keeping the constraints set by the designer intact
 
 Invoke 'yosys' and execute the below commands to perform the synthesis of the above circuit:
-read_liberty -lib ./lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```
+$   read_liberty -lib ./lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 $   read_verilog iiitb_usr.v 
 $   synth -top usr
 $   dfflibmap -liberty ./lib/sky130_fd_sc_hd__tt_025C_1v80.lib  
@@ -105,12 +102,9 @@ $   abc -liberty -lib ./lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 $   show
 $   stat
 ```
-
 ###Gate Level Simulation (GLS)
-
 GLS implies running the testbench with netlist as the design under test. It is used to verify the logical correctness of the design after synthesis. It also ensures that the timing constraints are met.
-
-Execute below commands in the project directory to perform GLS.
+Execute below commands in the project directory to perform GLS:
 ```
 $   iverilog ./verilog_model/primitives.v ./verilog_model/sky130_fd_sc_hd.v usr_netlist.v iiitb_usr_tb.v
 $   ./a.out
@@ -118,7 +112,6 @@ $   gtkwave dump.vcd
 ```
 ## Functional Characteristics
 ### Pre Synthesis Simulation Results
-
 The Simulation Results for input data = '1001' are as follows:
 <p align= 'center'><img src='https://user-images.githubusercontent.com/110731913/185220572-c7d7a025-a394-4d98-8387-55c5c69b9cd2.png'></p>
 
