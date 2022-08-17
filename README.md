@@ -102,7 +102,7 @@ $   abc -liberty -lib ./lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 $   show
 $   stat
 ```
-###Gate Level Simulation (GLS)
+### Gate Level Simulation (GLS)
 GLS implies running the testbench with netlist as the design under test. It is used to verify the logical correctness of the design after synthesis. It also ensures that the timing constraints are met.
 Execute below commands in the project directory to perform GLS:
 ```
