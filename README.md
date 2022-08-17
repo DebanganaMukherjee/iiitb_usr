@@ -64,31 +64,76 @@ Open your terminal and type the following to install iverilog and GTKWave:
 $   sudo apt-get update
 $   sudo apt-get install iverilog gtkwave
 ```
-## Functional Simulation
-To clone the Repository and download the Netlist files for Simulation, enter the following commands in your terminal:
-```
-$   sudo apt install -y git
-$   git clone https://github.com/sanampudig/iiitb_pwm_gen
-$   cd iiitb_pwm_gen
-$   iverilog iiitb_pwm_gen.v iiitb_pwm_gen_tb.v
-$   ./a.out
-$   gtkwave pwm.vcd
-```
-## Simulation Results
 
-The Simulation Results for input data = '1001' are as follows:
-<p align= 'center'><img src='https://user-images.githubusercontent.com/110731913/183880074-aa4c44e3-1d97-4fcc-817b-3d3da4c731af.png'></p>
 
-The above simulation displays Parallel Loading, Right Shift, Left Shift and Locked State (No Change) operations respectively on input data '1001'.
-
-## Synthesis of Verilog Code [Work in Progress]
+## Synthesis of Verilog Code 
 ### About Yosys
 Yosys is a framework for Verilog RTL synthesis. It currently has extensive Verilog-2005 support and provides a basic set of synthesis algorithms for various application domains.
 - more at https://yosyshq.net/yosys/
 
 To install yosys follow the instructions given in the following github repository:
-- https://github.com/YosysHQ/yosys
-  -  Note: To be updated soon.
+- https://github.com/YosysHQ/yosys/blob/master/README.md#installation
+
+
+## Simulation and Synthesis
+
+### Functional Simulation
+To clone the Repository and download the Netlist files for Simulation, enter the following commands in your terminal:
+```
+$   sudo apt install -y git
+$   git clone https://github.com/DebanganaMukherjee/iiitb_usr.git
+$   cd iiitb_usr
+$   iverilog iiitb_usr.v iiitb_usr_tb.v
+$   ./a.out
+$   gtkwave dump.vcd
+```
+### About Synthesis
+Synthesis transforms the simple RTL design into a gate-level netlist with all the constraints as specified by the designer. In simple language, Synthesis is a process that converts the abstract form of design to a properly implemented chip in terms of logic gates.
+
+Synthesis takes place in multiple steps:
+- Converting RTL into simple logic gates.
+- Mapping those gates to actual technology-dependent logic gates available in the technology libraries.
+- Optimizing the mapped netlist keeping the constraints set by the designer intact
+
+Invoke 'yosys' and execute the below commands to perform the synthesis of the above circuit:
+read_liberty -lib ./lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+```
+$   read_verilog iiitb_usr.v 
+$   synth -top usr
+$   dfflibmap -liberty ./lib/sky130_fd_sc_hd__tt_025C_1v80.lib  
+$   abc -liberty -lib ./lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+$   show
+$   stat
+```
+
+###Gate Level Simulation (GLS)
+
+GLS implies running the testbench with netlist as the design under test. It is used to verify the logical correctness of the design after synthesis. It also ensures that the timing constraints are met.
+
+Execute below commands in the project directory to perform GLS.
+```
+$   iverilog ./verilog_model/primitives.v ./verilog_model/sky130_fd_sc_hd.v usr_netlist.v iiitb_usr_tb.v
+$   ./a.out
+$   gtkwave dump.vcd
+```
+## Functional Characteristics
+### Pre Synthesis Simulation Results
+
+The Simulation Results for input data = '1001' are as follows:
+<p align= 'center'><img src='https://user-images.githubusercontent.com/110731913/185220572-c7d7a025-a394-4d98-8387-55c5c69b9cd2.png'></p>
+
+The above simulation displays Parallel Loading, Right Shift, Left Shift and Locked State (No Change) operations respectively on input data '1001'.
+### Netlist Representation
+<p align= 'center'><img src='https://user-images.githubusercontent.com/110731913/185226351-e487c84d-6790-4c5d-bcb8-b15fd4121f20.png'></p>
+
+### Post Synthesis Statistics
+Can be displayed with yosys command 'stat':
+<p align= 'center'><img src='https://user-images.githubusercontent.com/110731913/185227238-d4402f8a-cd05-4d77-9252-93076c8fea3f.png'></p>
+
+### Post Synthesis Simulation Result
+Simulation(GLS) after Netlist generation:
+
+<p align= 'center'><img src='https://user-images.githubusercontent.com/110731913/185227793-2325596a-5c80-4fed-a454-286677e20bbc.png'></p>
 
 ## Contributors
 - Debangana Mukherjee
