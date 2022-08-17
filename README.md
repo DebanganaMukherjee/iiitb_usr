@@ -65,7 +65,6 @@ $   sudo apt-get update
 $   sudo apt-get install iverilog gtkwave
 ```
 
-
 ## Simulation and Synthesis 
 ### About Yosys
 Yosys is a framework for Verilog RTL synthesis. It currently has extensive Verilog-2005 support and provides a basic set of synthesis algorithms for various application domains.
@@ -125,8 +124,7 @@ Can be displayed with yosys command 'stat':
 
 ### Post Synthesis Simulation Result
 Simulation(GLS) after Netlist generation:
-
-<p align= 'center'><img src='https://user-images.githubusercontent.com/110731913/185227793-2325596a-5c80-4fed-a454-286677e20bbc.png'></p>
+<p align= 'center'><img src='https://user-images.githubusercontent.com/110731913/185229872-8e7916b1-e29f-4a68-988d-61df84030515.png'></p>
 
 ## Contributors
 - Debangana Mukherjee
