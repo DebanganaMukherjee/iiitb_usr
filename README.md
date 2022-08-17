@@ -122,8 +122,8 @@ The above simulation displays Parallel Loading, Right Shift, Left Shift and Lock
 Can be displayed with yosys command 'stat':
 <p align= 'center'><img src='https://user-images.githubusercontent.com/110731913/185227238-d4402f8a-cd05-4d77-9252-93076c8fea3f.png'></p>
 
-### Post Synthesis Simulation Result
-Simulation(GLS) after Netlist generation:
+### Post Synthesis Simulation Results
+Simulation (GLS) after Netlist generation:
 <p align= 'center'><img src='https://user-images.githubusercontent.com/110731913/185229872-8e7916b1-e29f-4a68-988d-61df84030515.png'></p>
 
 ## Contributors
