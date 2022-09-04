@@ -226,7 +226,41 @@ The contents of the merged.nom.lef file should contain the macro definition of "
 
 ![Screenshot (106)](https://user-images.githubusercontent.com/110731913/188313051-a950376a-ac08-4df7-a77b-1dac44832360.png)
 
+Setup and Hold Slack Post synthesis:
 
+![Screenshot (136)](https://user-images.githubusercontent.com/110731913/188313339-5ac322dd-81e0-4016-8e9e-492c8b24ef86.png)
+
+Flop Ratio:
+
+```
+Flop Ratio = Ratio of total number of flip flops / Total number of cells present in the design = 4/17 = 0.235
+```
+The sky130_vsdinv should also reflect in your netlist after synthesis:
+
+![Screenshot (137)](https://user-images.githubusercontent.com/110731913/188313542-c760844b-f390-4fda-9b0b-1408e737a86a.png)
+
+### Floorplan
+```
+% run_floorplan
+```
+![Screenshot (107)](https://user-images.githubusercontent.com/110731913/188313585-c463eef5-652a-4318-a11e-c56bdea441a4.png)
+
+#### Floorplan Reports
+Die Area:
+
+![Screenshot (138)](https://user-images.githubusercontent.com/110731913/188313750-1a8d955b-4c85-4914-8ef9-be790dcfb9cc.png)
+
+Core Area:
+
+![Screenshot (139)](https://user-images.githubusercontent.com/110731913/188313756-3300338b-545d-406b-b61c-19e15b2707bf.png)
+
+View the floorplan, using the below magic command in the terminal opened in the directory: <current_run_directory>/results/floorplan
+
+```
+$ magic -T /home/debangana3/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read usr.def &
+```
+
+![Screenshot (108)](https://user-images.githubusercontent.com/110731913/188313900-ceca680c-4464-40e1-b229-0d9edf355195.png)
 
 
 
