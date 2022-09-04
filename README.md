@@ -268,6 +268,8 @@ Floorplan view:
 
 ![Screenshot (112)](https://user-images.githubusercontent.com/110731913/188314140-bc2b796f-251d-483b-9717-e4d2ebc26f41.png)
 
+Refer below for the cells on floorplan (can be found by zooming into the left bottom corner):
+
 ![Screenshot (114)](https://user-images.githubusercontent.com/110731913/188314163-26159c25-e979-4b28-88fc-33c46292c95f.png)
 
 ### Placement
