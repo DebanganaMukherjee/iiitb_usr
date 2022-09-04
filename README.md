@@ -1,8 +1,7 @@
 # iiitb_usr - Universal Shift Register (USR)
 This project analyses and simulates the operations of a 4-bit Universal Shift Register. The Register can take data and control inputs from the user and execute data operations according to the mode of operation specified.
 
-## Introduction to USR
-### About
+## Introduction to USR: About
 A Universal Shift Register is a register with both  right shift and left shift with parallel load capabilities. Universal Shift Registers are used as memory elements in computers. A Unidirectional Shift Register shifts in only one direction whereas a Bidirectional Shift Register is capable of shifting in both the directions. The design of Universal Shift Register is a combination of Bidirectional Shift Register and a Unidirectional Shift Register with provision for parallel.
 
 A 4-bit Universal Shift Register consists of 4 flip-flops and 4 4×1 multiplexers. All the 4 multiplexers share the same select lines (S1 and S0) which select the mode of operation for the shift register. The select line inputs choose the suitable input for the flip-flops.
@@ -151,6 +150,8 @@ Simulation (GLS) after Netlist generation:
 ## Layout
 After completion of Synthesis, we can proceed towards the steps of physical design. For this, we use OpenLane flow.
 
+### Prerequisites
+
 To run a custom design on openlane, navigate to the Openlane folder and run the following commands:
 ```
 $ cd designs
@@ -195,6 +196,41 @@ $ ./flow.tcl -interactive
 ```
 
 ![Screenshot (103)1](https://user-images.githubusercontent.com/110731913/188311509-31e52c4a-26bd-4b05-b2ec-5669925b847d.png)
+
+This command opens the interactive tcl console. In the tcl console type the following commands:
+```
+% package require openlane 0.9
+% prep -design iiitb_usr
+```
+![Screenshot (103)](https://user-images.githubusercontent.com/110731913/188312550-12cface1-189d-43c1-ab21-ab24c73c5e2c.png)
+
+The following commands are to merge the external the lef files to the merged.nom.lef file. 
+
+```
+% set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+% add_lefs -src $lefs
+```
+![Screenshot (104)](https://user-images.githubusercontent.com/110731913/188312708-35f15c46-aa12-4b62-9d23-1771b922188d.png)
+
+The contents of the merged.nom.lef file should contain the macro definition of "sky130_vsdinv":
+
+![Screenshot (135)](https://user-images.githubusercontent.com/110731913/188312828-c38111b0-b320-4dd5-9f4c-b67c437843e7.png)
+
+### Synthesis
+```
+% run_synthesis
+```
+![Screenshot (105)](https://user-images.githubusercontent.com/110731913/188312999-6327ce50-f2c6-4817-8587-7d5bc8b5fd3d.png)
+
+#### Synthesis Reports
+
+![Screenshot (106)](https://user-images.githubusercontent.com/110731913/188313051-a950376a-ac08-4df7-a77b-1dac44832360.png)
+
+
+
+
+
+
 
 
 
