@@ -246,11 +246,14 @@ The sky130_vsdinv should also reflect in your netlist after synthesis:
 ![Screenshot (107)](https://user-images.githubusercontent.com/110731913/188313585-c463eef5-652a-4318-a11e-c56bdea441a4.png)
 
 #### Floorplan Reports
-Die Area:
+
+The die area and the core area report can be found in <current_run_dir>/reports/floorplan as 3-initial_fp_die_area.rpt and 3-initial_fp_core_area.rpt respectively. 
+
+- Die Area:
 
 ![Screenshot (138)](https://user-images.githubusercontent.com/110731913/188313750-1a8d955b-4c85-4914-8ef9-be790dcfb9cc.png)
 
-Core Area:
+- Core Area:
 
 ![Screenshot (139)](https://user-images.githubusercontent.com/110731913/188313756-3300338b-545d-406b-b61c-19e15b2707bf.png)
 
