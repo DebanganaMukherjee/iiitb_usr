@@ -148,6 +148,35 @@ Can be displayed with yosys command 'stat':
 Simulation (GLS) after Netlist generation:
 <p align= 'center'><img src='https://user-images.githubusercontent.com/110731913/185229872-8e7916b1-e29f-4a68-988d-61df84030515.png'></p>
 
+## Layout
+After completion of Synthesis, we can proceed towards the steps of physical design. For this, we use OpenLane flow.
+
+To run a custom design on openlane, navigate to the Openlane folder and run the following commands:
+```
+$ cd designs
+
+$ mkdir iiitb_usr
+
+$ cd iiitb_usr
+
+$ mkdir src
+
+$ touch config.json
+
+$ cd src
+
+$ touch iiitb_usr.v
+```
+Kindly note that the iiitb_usr.v file should contain the verilog RTL code you have used to get your post synthesis simulation result.
+
+Copy the following files to src folder in your design:
+- sky130_fd_sc_hd__fast.lib
+- sky130_fd_sc_hd__slow.lib
+- sky130_fd_sc_hd__typical.lib 
+- sky130_vsdinv.lef files 
+The src folder should finally contain:
+
+Create a new directory with the project names in OpenLane/designs. In this case, the project folder created is "iiitb_usr'. This contain a config.json file, a folder names runs and a folder named src. Add the verilog top module file in src folder and edit the config file as below.
 ## Contributors
 - Debangana Mukherjee
 - Kunal Ghosh
