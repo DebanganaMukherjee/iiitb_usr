@@ -262,6 +262,27 @@ $ magic -T /home/debangana3/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech r
 
 ![Screenshot (108)](https://user-images.githubusercontent.com/110731913/188313900-ceca680c-4464-40e1-b229-0d9edf355195.png)
 
+Floorplan view:
+
+![Screenshot (113)](https://user-images.githubusercontent.com/110731913/188314151-ec90eea3-e6db-410c-ac6c-4863831c2310.png)
+
+![Screenshot (112)](https://user-images.githubusercontent.com/110731913/188314140-bc2b796f-251d-483b-9717-e4d2ebc26f41.png)
+
+![Screenshot (114)](https://user-images.githubusercontent.com/110731913/188314163-26159c25-e979-4b28-88fc-33c46292c95f.png)
+
+### Placement
+```
+% run_placement
+```
+![Screenshot (115)](https://user-images.githubusercontent.com/110731913/188314224-cf64eeb8-02f6-4e27-b5d9-1f13f1c79c2f.png)
+
+#### Placement Reports
+
+View the placement in the layout, using the below Magic command in the terminal opened in the directory: <current_run_directory>/results/placement
+
+
+
+
 
 
 
