@@ -296,6 +296,7 @@ Placement view showing sky130_vsdinv:
 
 ![Screenshot (118)](https://user-images.githubusercontent.com/110731913/188314885-3752d3d9-4d2b-4a51-bb78-e1e86d5fe811.png)
 
+
 The sky130_vsdinv should also reflect in your netlist after placement:
 
 ![Screenshot (141)](https://user-images.githubusercontent.com/110731913/188315068-00b9284f-7316-47c7-8cf2-7e42fae91d5f.png)
@@ -340,27 +341,6 @@ Area report using Magic :
 The sky130_vsdinv should be visible in your netlist post-routing:
 
 ![Screenshot (142)](https://user-images.githubusercontent.com/110731913/188316006-727639c9-d48c-4a9c-9e93-e9458fce515c.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## Contributors
