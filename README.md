@@ -300,7 +300,42 @@ The sky130_vsdinv should also reflect in your netlist after placement:
 
 ![Screenshot (141)](https://user-images.githubusercontent.com/110731913/188315068-00b9284f-7316-47c7-8cf2-7e42fae91d5f.png)
 
+### Clock Tree Synthesis
 
+```
+% run_cts
+```
+![Screenshot (120)](https://user-images.githubusercontent.com/110731913/188315299-a90869d7-be8b-40de-940a-dbd5d352594c.png)
+
+### Routing
+
+```
+% run_routing
+```
+![Screenshot (121)](https://user-images.githubusercontent.com/110731913/188315367-15d44a39-5d22-4108-9706-900959bba392.png)
+
+#### Routing Reports
+
+View the layout after routing, using the below magic command in the terminal opened in the directory: <current_run_directory>/results/routing
+
+```
+$ magic -T /home/nandu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_freqdiv.def &
+```
+![Screenshot (122)](https://user-images.githubusercontent.com/110731913/188315485-4e173fa6-b7c3-461a-8f28-58153f74c8b5.png)
+
+Routing View
+
+![Screenshot (123)](https://user-images.githubusercontent.com/110731913/188315633-54dfe7dd-34db-41f3-b08f-7ebb504df6a1.png)
+
+![Screenshot (124)](https://user-images.githubusercontent.com/110731913/188315671-c35b1e69-5b32-43b1-9722-70db845fa382.png)
+
+Routing view showing sky130_vsdinv:
+
+![Screenshot (125)](https://user-images.githubusercontent.com/110731913/188315758-e44db7b1-4e23-4882-bbea-8cadbd58c96a.png)
+
+Area report using Magic :
+
+![Screenshot (128)](https://user-images.githubusercontent.com/110731913/188315828-e1bed655-f3f1-4b57-8b82-c75befef4cac.png)
 
 
 
