@@ -68,6 +68,33 @@ $   sudo apt-get install iverilog gtkwave
 To install yosys follow the instructions given in the following github repository:
 - https://github.com/YosysHQ/yosys/blob/master/README.md#installation
 
+### Installation of OpenLane
+OpenLane is an automated RTL to GDSII flow based on several components including OpenROAD, Yosys, Magic, Netgen, CVC, SPEF-Extractor, CU-GR, Klayout and a number of custom scripts for design exploration and optimization. The flow performs full ASIC implementation steps from RTL all the way down to GDSII.
+
+Follow the steps from the below git repository to install OpenLane on Ubuntu:
+
+https://github.com/The-OpenROAD-Project/OpenLane>https://github.com/The-OpenROAD-Project/OpenLane
+
+### Installation of Magic 
+Enter the following commands to install the prerequisite files prior to Magic setup:
+```
+$ sudo apt-get update 
+$ sudo apt-get install csh
+$ sudo apt-get install x11
+$ sudo apt-get install xorg
+$ sudo apt-get install xorg openbox
+$ sudo apt-get install freeglut3-dev
+$ sudo apt-get install tcl-dev tk-dev
+```
+Commands for setting up Magic:
+```
+$ git clone https://github.com/RTimothyEdwards/magic
+$ cd magic
+$ ./configure
+$ make
+$ sudo make install
+```    
+## Simulation and Synthesis         
 ### Functional Simulation
 To clone the Repository and download the Netlist files for Simulation, enter the following commands in your terminal:
 ```
