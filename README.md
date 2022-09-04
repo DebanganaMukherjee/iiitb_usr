@@ -176,7 +176,37 @@ Copy the following files to src folder in your design:
 - sky130_vsdinv.lef files 
 The src folder should finally contain:
 
-Create a new directory with the project names in OpenLane/designs. In this case, the project folder created is "iiitb_usr'. This contain a config.json file, a folder names runs and a folder named src. Add the verilog top module file in src folder and edit the config file as below.
+![Screenshot (133)](https://user-images.githubusercontent.com/110731913/188311095-4f1907c7-4f5a-411b-9903-7261e8e402df.png)
+
+The config.json folder present within the "iiitb_usr" folder should be modified as follows: 
+Note: Add the verilog topmost module name under 'design_name'.
+
+![Screenshot (134)](https://user-images.githubusercontent.com/110731913/188311293-f1a236c7-46c7-47ad-8542-d1ecc5b6de3b.png)
+
+Next navigate to the Openlane folder in terminal and give the following command:
+
+```
+$ sudo make mount 
+```
+After entering the Openlane container give the following command:
+
+```
+$ ./flow.tcl -interactive
+```
+
+![Screenshot (103)1](https://user-images.githubusercontent.com/110731913/188311509-31e52c4a-26bd-4b05-b2ec-5669925b847d.png)
+
+
+
+
+
+
+
+
+
+
+
+
 ## Contributors
 - Debangana Mukherjee
 - Kunal Ghosh
