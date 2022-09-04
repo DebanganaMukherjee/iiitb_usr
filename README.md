@@ -337,6 +337,10 @@ Area report using Magic :
 
 ![Screenshot (128)](https://user-images.githubusercontent.com/110731913/188315828-e1bed655-f3f1-4b57-8b82-c75befef4cac.png)
 
+The sky130_vsdinv should be visible in your netlist post-routing:
+
+![Screenshot (142)](https://user-images.githubusercontent.com/110731913/188316006-727639c9-d48c-4a9c-9e93-e9458fce515c.png)
+
 
 
 
