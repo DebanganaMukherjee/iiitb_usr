@@ -260,7 +260,7 @@ View the floorplan, using the below magic command in the terminal opened in the 
 $ magic -T /home/debangana3/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read usr.def &
 ```
 
-![Screenshot (108)](https://user-images.githubusercontent.com/110731913/188313900-ceca680c-4464-40e1-b229-0d9edf355195.png)
+![Screenshot (143)](https://user-images.githubusercontent.com/110731913/188316818-826b10e8-ac5b-4385-8326-fd480785253f.png)
 
 Floorplan view:
 
@@ -292,7 +292,7 @@ $ magic -T /home/debangana3/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech r
 
 ![Screenshot (117)](https://user-images.githubusercontent.com/110731913/188314694-ecfffc55-1d06-41ee-a3ad-dcc6d6fe7998.png)
 
-Placement view showing sky130_vsdinv:
+Placement view showing the sky130_vsdinv cells:
 
 ![Screenshot (118)](https://user-images.githubusercontent.com/110731913/188314885-3752d3d9-4d2b-4a51-bb78-e1e86d5fe811.png)
 
@@ -320,8 +320,9 @@ The sky130_vsdinv should also reflect in your netlist after placement:
 View the layout after routing, using the below magic command in the terminal opened in the directory: <current_run_directory>/results/routing
 
 ```
-$ magic -T /home/nandu/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read iiitb_freqdiv.def &
+$ magic -T /home/debangana3/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read usr.def &
 ```
+
 ![Screenshot (122)](https://user-images.githubusercontent.com/110731913/188315485-4e173fa6-b7c3-461a-8f28-58153f74c8b5.png)
 
 Routing View
@@ -330,7 +331,7 @@ Routing View
 
 ![Screenshot (124)](https://user-images.githubusercontent.com/110731913/188315671-c35b1e69-5b32-43b1-9722-70db845fa382.png)
 
-Routing view showing sky130_vsdinv:
+Routing view showing sky130_vsdinv (Cell 23):
 
 ![Screenshot (125)](https://user-images.githubusercontent.com/110731913/188315758-e44db7b1-4e23-4882-bbea-8cadbd58c96a.png)
 
@@ -341,7 +342,6 @@ Area report using Magic :
 The sky130_vsdinv should be visible in your netlist post-routing:
 
 ![Screenshot (142)](https://user-images.githubusercontent.com/110731913/188316006-727639c9-d48c-4a9c-9e93-e9458fce515c.png)
-
 
 ## Contributors
 - Debangana Mukherjee
