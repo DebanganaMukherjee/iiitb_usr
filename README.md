@@ -280,6 +280,32 @@ Floorplan view:
 
 View the placement in the layout, using the below Magic command in the terminal opened in the directory: <current_run_directory>/results/placement
 
+```
+$ magic -T /home/debangana3/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech read ../../tmp/merged.nom.lef def read usr.def &
+```
+
+![Screenshot (140)](https://user-images.githubusercontent.com/110731913/188314505-78ceae06-0632-47c1-9b44-94309b1c072f.png)
+
+#### Placement View
+
+![Screenshot (116)](https://user-images.githubusercontent.com/110731913/188314672-095af346-d7ab-4417-acf4-bfe8d2493e34.png)
+
+![Screenshot (117)](https://user-images.githubusercontent.com/110731913/188314694-ecfffc55-1d06-41ee-a3ad-dcc6d6fe7998.png)
+
+Placement view showing sky130_vsdinv:
+
+![Screenshot (118)](https://user-images.githubusercontent.com/110731913/188314885-3752d3d9-4d2b-4a51-bb78-e1e86d5fe811.png)
+
+The sky130_vsdinv should also reflect in your netlist after placement:
+
+![Screenshot (141)](https://user-images.githubusercontent.com/110731913/188315068-00b9284f-7316-47c7-8cf2-7e42fae91d5f.png)
+
+
+
+
+
+
+
 
 
 
