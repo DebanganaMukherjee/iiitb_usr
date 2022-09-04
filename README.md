@@ -45,18 +45,13 @@ According to the inputs to the select lines, the following modes can be implemen
 5) Used in time delay and data manipulation applications.
 6) Used in frequency counters, binary counters and digital clocks.
 
-## About iverilog
+## Tools Used
+### iverilog and GTKWave Installation
 
-Icarus Verilog is an implementation for the IEEE-1364 Verilog hardware description language. It is a Verilog simulation and synthesis tool.
-
-## About GTKWave
-
-GTKWave is a VCD waveform viewer based on the GTK library. This viewer supports VCD and LXT formats for signal dumps. GTKWave reads Ver Structural Verilog Compiler generated AET files as well as standard Verilog VCD/EVCD files and allows their viewing. 
-
+- Icarus Verilog is an implementation for the IEEE-1364 Verilog hardware description language. It is a Verilog simulation and synthesis tool.
+- GTKWave is a VCD waveform viewer based on the GTK library. This viewer supports VCD and LXT formats for signal dumps. GTKWave reads Ver Structural Verilog Compiler generated AET files as well as standard Verilog VCD/EVCD files and allows their viewing. 
 
 <p align='center'> <img src= 'https://user-images.githubusercontent.com/110731913/183261331-a86a9e7c-8e26-4cb0-a4c5-9b4475aeee70.png'></p>
-
-## Installing iverilog and GTKWave
 
 For Ubuntu
 Open your terminal and type the following to install iverilog and GTKWave:
@@ -65,10 +60,9 @@ Open your terminal and type the following to install iverilog and GTKWave:
 $   sudo apt-get update
 $   sudo apt-get install iverilog gtkwave
 ```
+### Yosys Installation
 
-## Simulation and Synthesis 
-### About Yosys
-Yosys is a framework for Verilog RTL synthesis. It currently has extensive Verilog-2005 support and provides a basic set of synthesis algorithms for various application domains.
+- Yosys is a framework for Verilog RTL synthesis. It currently has extensive Verilog-2005 support and provides a basic set of synthesis algorithms for various application domains.
 - more at https://yosyshq.net/yosys/
 
 To install yosys follow the instructions given in the following github repository:
