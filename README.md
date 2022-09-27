@@ -224,11 +224,14 @@ The contents of the merged.nom.lef file should contain the macro definition of "
 ![Screenshot (105)](https://user-images.githubusercontent.com/110731913/188312999-6327ce50-f2c6-4817-8587-7d5bc8b5fd3d.png)
 
 #### Synthesis Reports
+
 - Including vsdinv:
 
 ![Screenshot (106)](https://user-images.githubusercontent.com/110731913/188313051-a950376a-ac08-4df7-a77b-1dac44832360.png)
 
 - Excluding vsdinv:
+
+
 ![Screenshot (304)](https://user-images.githubusercontent.com/110731913/192586773-1e46e0b2-ae99-403a-91ba-2cb71512dae3.png)
 
 Highlighted D-flipflops used in design:
@@ -243,7 +246,7 @@ Setup and Hold Slack Post synthesis:
 ### Flop Ratio:
 
 ```
-Flop Ratio = Ratio of total number of flip flops / Total number of cells present in the design = 4/17 = 0.235
+Flop Ratio = Ratio of total number of flip flops / Total number of cells present in the design = 4/16 = 0.25
 ```
 The sky130_vsdinv should also reflect in your netlist after synthesis:
 
