@@ -392,20 +392,23 @@ OpenSTA/app/sta
 This opens your STA base. Next type in the following:
 
 ```
-read_liberty -max /home/debangana3/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib
-read_liberty -min /home/debangana3/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib
-read_verilog /home/debangana3/OpenLane/designs/iiitb_usr_1/runs/RUN_2022.09.27_15.14.27/results/routing/usr.resized.v
-link_design usr
-read_sdc /home/debangana3/OpenLane/designs/iiitb_usr_1/runs/RUN_2022.09.27_15.14.27/results/cts/usr.sdc
-read_spef /home/debangana3/OpenLane/designs/iiitb_usr_1/runs/RUN_2022.09.27_15.14.27/results/routing/usr.nom.spef
-set_propagated_clock [all_clocks]
-report_checks
+% read_liberty -max /home/debangana3/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib
+% read_liberty -min /home/debangana3/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib
+% read_verilog /home/debangana3/OpenLane/designs/iiitb_usr_1/runs/RUN_2022.09.27_15.14.27/results/routing/usr.resized.v
+% link_design usr
+% read_sdc /home/debangana3/OpenLane/designs/iiitb_usr_1/runs/RUN_2022.09.27_15.14.27/results/cts/usr.sdc
+% read_spef /home/debangana3/OpenLane/designs/iiitb_usr_1/runs/RUN_2022.09.27_15.14.27/results/routing/usr.nom.spef
+% set_propagated_clock [all_clocks]
+% report_checks
 ```
+
 ![Screenshot (311)](https://user-images.githubusercontent.com/110731913/192590796-d6cad000-49cd-41ad-ad43-60a3e728d46d.png)
 
 ### Maximum Positive Slack: 7.16 ns
 
+
 ![Screenshot (308)](https://user-images.githubusercontent.com/110731913/192591789-66417123-087d-4f6c-8e9b-eb24eae0e39c.png)
+
 
 ### Frequency = 1/ (Clock period-Slack) = 1/(10-7.16) = 352.1 MHz
 
