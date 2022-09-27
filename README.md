@@ -141,7 +141,8 @@ The above simulation displays Parallel Loading, Right Shift, Left Shift and Lock
 
 ### Post Synthesis Statistics
 Can be displayed with yosys command 'stat':
-<p align= 'center'><img src='https://user-images.githubusercontent.com/110731913/185227238-d4402f8a-cd05-4d77-9252-93076c8fea3f.png'></p>
+<p align= 'center'><img src=https://user-images.githubusercontent.com/110731913/192586140-5a0bc8c3-6388-42c3-978a-11df6f1bf411.png
+></p>
 
 ### Post Synthesis Simulation Results
 Simulation (GLS) after Netlist generation:
@@ -223,14 +224,23 @@ The contents of the merged.nom.lef file should contain the macro definition of "
 ![Screenshot (105)](https://user-images.githubusercontent.com/110731913/188312999-6327ce50-f2c6-4817-8587-7d5bc8b5fd3d.png)
 
 #### Synthesis Reports
+- Including vsdinv:
 
 ![Screenshot (106)](https://user-images.githubusercontent.com/110731913/188313051-a950376a-ac08-4df7-a77b-1dac44832360.png)
+
+- Excluding vsdinv:
+![Screenshot (304)](https://user-images.githubusercontent.com/110731913/192586773-1e46e0b2-ae99-403a-91ba-2cb71512dae3.png)
+
+Highlighted D-flipflops used in design:
+
+![Screenshot (303)](https://user-images.githubusercontent.com/110731913/192586939-79a96454-bfd3-4291-b84d-859e70101535.png)
+
 
 Setup and Hold Slack Post synthesis:
 
 ![Screenshot (136)](https://user-images.githubusercontent.com/110731913/188313339-5ac322dd-81e0-4016-8e9e-492c8b24ef86.png)
 
-Flop Ratio:
+### Flop Ratio:
 
 ```
 Flop Ratio = Ratio of total number of flip flops / Total number of cells present in the design = 4/17 = 0.235
@@ -330,7 +340,19 @@ $ magic -T /home/debangana3/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech r
 
 ![Screenshot (122)](https://user-images.githubusercontent.com/110731913/188315485-4e173fa6-b7c3-461a-8f28-58153f74c8b5.png)
 
-Routing View
+Routing View 
+
+- Without including vsdinv:
+
+### Area Report Post-Routing: Area of design calculated to be: 2467.272 um2
+
+![Screenshot (302)](https://user-images.githubusercontent.com/110731913/192587553-956939ef-5c8d-4229-aa4b-08702d1c4d24.png)
+
+### Power Report: Total power consumed: 92.6 uW
+
+![Screenshot (305)](https://user-images.githubusercontent.com/110731913/192589273-4414e4cb-8cc1-456c-8656-03dbcb5547b8.png)
+
+- Using vsdinv:
 
 ![Screenshot (123)](https://user-images.githubusercontent.com/110731913/188315633-54dfe7dd-34db-41f3-b08f-7ebb504df6a1.png)
 
@@ -347,6 +369,43 @@ Area report using Magic :
 The sky130_vsdinv should be visible in your netlist post-routing:
 
 ![Screenshot (142)](https://user-images.githubusercontent.com/110731913/188316006-727639c9-d48c-4a9c-9e93-e9458fce515c.png)
+
+## STA
+
+Run the entire flow using a single command:
+
+```
+./flow.tcl -design iiitb_usr
+```
+Install OpenSTA using:
+
+```
+$ sudo apt install opensta
+```
+After entering your home directory, run the following:
+```
+OpenSTA/app/sta
+```
+This opens your STA base. Next type in the following:
+
+```
+read_liberty -max /home/debangana3/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib
+read_liberty -min /home/debangana3/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib
+read_verilog /home/debangana3/OpenLane/designs/iiitb_usr_1/runs/RUN_2022.09.27_15.14.27/results/routing/usr.resized.v
+link_design usr
+read_sdc /home/debangana3/OpenLane/designs/iiitb_usr_1/runs/RUN_2022.09.27_15.14.27/results/cts/usr.sdc
+read_spef /home/debangana3/OpenLane/designs/iiitb_usr_1/runs/RUN_2022.09.27_15.14.27/results/routing/usr.nom.spef
+set_propagated_clock [all_clocks]
+report_checks
+```
+![Screenshot (311)](https://user-images.githubusercontent.com/110731913/192590796-d6cad000-49cd-41ad-ad43-60a3e728d46d.png)
+
+### Maximum Positive Slack: 7.16 ns
+
+![Screenshot (308)](https://user-images.githubusercontent.com/110731913/192591789-66417123-087d-4f6c-8e9b-eb24eae0e39c.png)
+
+### Frequency = 1/ (Clock period-Slack) = 1/(10-7.16) = 352.1 MHz
+
 
 ## Contributors
 - Debangana Mukherjee
