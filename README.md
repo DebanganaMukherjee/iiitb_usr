@@ -349,9 +349,12 @@ Routing View
 
 ### Area Report Post-Routing: Area of design calculated to be: 2467.272 um2
 
+
 ![Screenshot (302)](https://user-images.githubusercontent.com/110731913/192587553-956939ef-5c8d-4229-aa4b-08702d1c4d24.png)
 
+
 ### Power Report: Total power consumed: 92.6 uW
+
 
 ![Screenshot (305)](https://user-images.githubusercontent.com/110731913/192589273-4414e4cb-8cc1-456c-8656-03dbcb5547b8.png)
 
