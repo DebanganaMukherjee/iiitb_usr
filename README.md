@@ -225,16 +225,15 @@ The contents of the merged.nom.lef file should contain the macro definition of "
 
 #### Synthesis Reports
 
-- Including vsdinv:
+- ### Including vsdinv:
 
 ![Screenshot (106)](https://user-images.githubusercontent.com/110731913/188313051-a950376a-ac08-4df7-a77b-1dac44832360.png)
 
-- Excluding vsdinv:
-
+- ### Excluding vsdinv:
 
 ![Screenshot (304)](https://user-images.githubusercontent.com/110731913/192586773-1e46e0b2-ae99-403a-91ba-2cb71512dae3.png)
 
-Highlighted D-flipflops used in design:
+### Highlighted D-flipflops used in design:
 
 ![Screenshot (303)](https://user-images.githubusercontent.com/110731913/192586939-79a96454-bfd3-4291-b84d-859e70101535.png)
 
@@ -310,7 +309,7 @@ $ magic -T /home/debangana3/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech r
 
 ![Screenshot (117)](https://user-images.githubusercontent.com/110731913/188314694-ecfffc55-1d06-41ee-a3ad-dcc6d6fe7998.png)
 
-Placement view showing the sky130_vsdinv cells:
+### Placement view showing the sky130_vsdinv cells:
 
 ![Screenshot (118)](https://user-images.githubusercontent.com/110731913/188314885-3752d3d9-4d2b-4a51-bb78-e1e86d5fe811.png)
 
@@ -345,20 +344,20 @@ $ magic -T /home/debangana3/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.tech r
 
 Routing View 
 
-- Without including vsdinv:
+- ## Without including vsdinv:
 
-### Area Report Post-Routing: Area of design calculated to be: 2467.272 um2
+### Area Report Post-Routing: Area of design calculated to be: 2467.272 um2 (square micrometers)
 
 
 ![Screenshot (302)](https://user-images.githubusercontent.com/110731913/192587553-956939ef-5c8d-4229-aa4b-08702d1c4d24.png)
 
 
-### Power Report: Total power consumed: 92.6 uW
+### Power Report: Total power consumed: 92.6 uW (microwatts)
 
 
 ![Screenshot (305)](https://user-images.githubusercontent.com/110731913/192589273-4414e4cb-8cc1-456c-8656-03dbcb5547b8.png)
 
-- Using vsdinv:
+- ## Using vsdinv:
 
 ![Screenshot (123)](https://user-images.githubusercontent.com/110731913/188315633-54dfe7dd-34db-41f3-b08f-7ebb504df6a1.png)
 
@@ -413,7 +412,7 @@ This opens your STA base. Next type in the following:
 ![Screenshot (308)](https://user-images.githubusercontent.com/110731913/192591789-66417123-087d-4f6c-8e9b-eb24eae0e39c.png)
 
 
-### Frequency = 1/ (Clock period-Slack) = 1/(10-7.16) = 352.1 MHz
+### Frequency = 1/ (Clock period-Slack) = 1/(10-7.16) = 352.1 MHz (time is in nanoseconds)
 
 
 ## Contributors
